@@ -1,0 +1,7 @@
+sudo apt install i2c-tools -y
+
+sudo modprobe i2c-dev
+
+sudo modprobe i2c-piix4
+
+sudo kernelstub -a "acpi_enforce_resources=lax"
