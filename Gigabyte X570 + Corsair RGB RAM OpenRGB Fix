@@ -1,7 +1,14 @@
+#!/bin/bash
+
+# Update and install i2c-tools
 sudo apt install i2c-tools -y
 
+# Load necessary kernel modules
 sudo modprobe i2c-dev
-
 sudo modprobe i2c-piix4
 
+# Update kernel parameters
 sudo kernelstub -a "acpi_enforce_resources=lax"
+
+# Force reboot the system
+sudo reboot now
